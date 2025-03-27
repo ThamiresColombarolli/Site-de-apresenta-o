@@ -1,0 +1,357 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: black;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+
+}
+
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 5px 0;
+    font-style: italic;
+}
+
+section {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color:#023e8a;
+    text-decoration: underline;
+}
+
+button {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+button:hover {
+    background-color: #023e8a;
+}
+
+.dark.mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode section{ 
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode a {
+    color: rgb(0, 0, 0);
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode a {
+    color: rgb(0, 0, 0);
+}
+
+.dark-mode header, 
+.dark-mode section {
+    border-color: white;
+}
+
+/* Estilo padrão (Modo Claro) */
+body {
+    background-color: white;
+    color: black;
+}
+
+/* Estilo do Modo Escuro */
+.dark-mode {
+    background-color: #121212; /* Fundo escuro */
+    color: white; /* Texto branco */
+}
+
+/* Ajusta a cor dos links */
+.dark-mode a {
+    color: lightblue;
+}
+
+/* Se quiser alterar as seções e cabeçalhos para melhor contraste */
+.dark-mode header, 
+.dark-mode section {
+    background-color: #1e1e1e;
+    color: white;
+    border-color: white;
+}
+
+.sobre-mim-container {
+    position: relative;
+    display: inline-block;
+    martin-top: 20px;
+}
+
+.minha-foto {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.redes-socias {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.redes-sociais img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.redes-sociais img:hover {
+    transform: scale(1.2);
+}
+
+/* Quando passar o mouse na foto, aparecem os ícones */
+.sobre-mim-container:hover .minha-foto {
+    opacity: 0.3;
+}
+
+.sobre-mim-container:hover .redes-sociais {
+    opacity: 1;
+}
+
+/* Animação ao passar o mouse nos projetos */
+ul li a {
+    transition: color 0.3s ease-in-out;
+}
+
+ul li a:hover {
+    color: #ff6b6b;
+    font-size: 18px;
+}
+
+/* Efeito de fade-in nas seções */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Ativação do efeito */
+body.loaded section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    section {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .sobre-mim-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes-sociais {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        opacity: 1;
+        margin-top: 10px;
+    }
+}
+
+.hero {
+    background: linear-gradient(to right, #0077b6, #00b4d8);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.btn {
+    background: white;
+    color: #0077b6;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+.projetos-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #0077b6;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #023e8a;
+}
+
+/* Modo Claro - Fundo e Texto Normal */
+.card {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+/* Modo Escuro - Alteração para fundo escuro e texto branco */
+.dark-mode .card {
+    background-color: #1e1e1e; /* Cor de fundo escura */
+    color: white;
+    border: 1px solid #555; /* Borda para dar contraste */
+}
+
+/* Garantir que os títulos e textos mudem no modo escuro */
+.dark-mode .card h3,
+.dark-mode .card p {
+    color: white;
+}
+
+/* Ajustes para telas menores (celulares) */
+@media (max-width: 768px) {
+    /* Deixar os elementos ocupando toda a largura */
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto-perfil {
+        width: 120px; /* Reduz um pouco a foto no mobile */
+        height: 120px;
+    }
+
+    .projetos-container {
+        flex-direction: column; /* Um card por linha */
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Cards maiores para mobile */
+    }
+
+    /* Ajuste no cabeçalho */
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
